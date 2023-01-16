@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
             this.parent = document.querySelector(parentSelector);
         }
 
-        pricing() {
+        pricing(el) {
             const element = document.createElement('div');
             element.className='pricing__block';
             element.innerHTML=`
@@ -32,6 +32,33 @@ window.addEventListener('DOMContentLoaded', () => {
                 <a class="button" href="#">Place an order</a>
             `;
             this.parent.append(element);
+            
+        }
+
+        center() {
+            this.pricing();
+            let button = document.querySelectorAll('.button'),
+                blockCenter = document.querySelectorAll('.pricing__block'),
+                desc=document.createElement('p'),
+                badges=document.createElement('div'),
+                badge,
+                popular=document.createElement('div');
+            for(let i=0; i<3; i++) {
+                badge=document.createElement('div');
+                badge.className='badge';
+                badges.append(badge);
+            }
+            badges.append(badge);
+            button[1].style.backgroundColor = '#FD8D7B';
+            button[1].style.marginBottom  = '65px';
+            blockCenter[1].style.height  = '673px';
+            blockCenter[1].style.width  = '400px';
+            desc.textContent='Order now &  get 15% Discount';
+            desc.className='title-block-center';
+            badges.className='badges';
+            popular.className='popular';
+            popular.textContent='popular';
+            blockCenter[1].append(desc, badges, popular);
         }
     }
 
@@ -49,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
         'img/Icon2.svg',
         ['Wireframe Option', 'Logo Design Variation', 'Homepage Variation', 'Innerpage', 'Styleguide'],
         '.pricing__blocks'
-    ).pricing();
+    ).center();
 
     new Func(
         '39',

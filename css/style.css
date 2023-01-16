@@ -18,6 +18,7 @@ h1 {
   justify-content: space-between;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 65px;
+  align-items: center;
 }
 
 .pricing__block {
@@ -103,6 +104,67 @@ h1 {
   line-height: 16px;
   letter-spacing: 0.08em;
   color: #000000;
+}
+
+.title-block-center {
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #A9A9A9;
+  position: absolute;
+  bottom: 30px;
+}
+
+.badges {
+  z-index: 5;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+}
+
+.badge {
+  background: #FD8D7B;
+  border-radius: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.badge:first-child {
+  width: 48px;
+  height: 48px;
+}
+.badge:nth-child(2) {
+  width: 14px;
+  height: 14px;
+}
+.badge:nth-child(3) {
+  width: 4px;
+  height: 4px;
+}
+
+.popular {
+  position: absolute;
+  top: 25px;
+  right: -76px;
+  border-radius: 51% 12% 12% 51%/48% 25% 25% 50%;
+  width: 101px;
+  height: 30px;
+  background: #3B4040;
+  z-index: 125;
+  font-family: "BebasNeue-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @font-face {
